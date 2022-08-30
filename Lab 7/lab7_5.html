@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function add(){
+            let name = document.getElementById("cname").value;
+            let address = document.getElementById("address").value;
+            let tel = document.getElementById("tel").value;
+            
+            console.log(name,address,tel);
+
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            td1.innerHTML = name;
+            td2.innerHTML = address;
+            td3.innerHTML = tel;
+
+            let tr = document.createElement("tr");
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            
+            let table = document.getElementById("table");
+            table.appendChild(tr);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="cname">ชื่อลูกค้า : </label>
+        <input type="text" id="cname" required>
+        <br>
+        <label for="address">ที่อยู่ : </label>
+        <input type="text" id="address" required>
+        <br>
+        <label for="tel">เบอร์โทรศัพท์ : </label>
+        <input type="number" id="tel" required>
+        <br>
+    </form>
+    <input type="submit" value="เพิ่ม" onclick="add()">
+    <table id="table">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+        </tr>
+    </table>
+</body>
+</html>
