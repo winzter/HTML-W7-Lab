@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function colorChange(id){
+            let text = document.getElementById(id);
+            text.style.color = "green";
+       }
+    </script>
+</head>
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="name" onchange="colorChange('name')">
+    <br>
+    <label for="age">Age:</label>
+    <input type="text" id="age" pattern="\d" maxlength="3" size="5" onchange="colorChange('age')">
+    <br>
+    <label for="birthdate">Birthdate:</label>
+    <input type="text" id="birthdate" onchange="colorChange('birthdate')">
+</body>
+</html>
