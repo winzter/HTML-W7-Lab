@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        let size = 14;
+        
+        function decrease(){
+            let paragraph = document.getElementById("p1");
+            paragraph.style.fontSize = `${size--}px`;
+        }
+
+        function increase(){
+            let paragraph = document.getElementById("p1");
+            paragraph.style.fontSize = `${size++}px`;
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        <span onclick="decrease()">-</span> |
+        <span onclick="increase()">+</span>
+    </h1>
+    <p id="p1">
+        If you're leavin', will you take me with you? I'm
+        tired of talkin' on my phone There is one thing I can
+        never give you My heart will never be your home
+    </p>
+</body>
+</html>
